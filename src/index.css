@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 7%;
+    --foreground: 210 40% 93%;
+
+    --card: 222 41% 10%;
+    --card-foreground: 210 40% 93%;
+
+    --popover: 222 41% 10%;
+    --popover-foreground: 210 40% 93%;
+
+    --primary: 173 58% 39%;
+    --primary-foreground: 222 47% 7%;
+
+    --secondary: 222 30% 16%;
+    --secondary-foreground: 210 40% 85%;
+
+    --muted: 222 30% 14%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 173 58% 39%;
+
+    --radius: 0.75rem;
+
+    --success: 152 69% 40%;
+    --success-foreground: 210 40% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 222 47% 7%;
+    --info: 217 91% 60%;
+    --info-foreground: 210 40% 98%;
+
+    --sidebar-background: 222 41% 8%;
+    --sidebar-foreground: 210 40% 85%;
+    --sidebar-primary: 173 58% 39%;
+    --sidebar-primary-foreground: 222 47% 7%;
+    --sidebar-accent: 222 30% 14%;
+    --sidebar-accent-foreground: 210 40% 85%;
+    --sidebar-border: 222 30% 18%;
+    --sidebar-ring: 173 58% 39%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(173 58% 39%), hsl(217 91% 60%));
+    --gradient-card: linear-gradient(135deg, hsl(222 41% 12%), hsl(222 41% 8%));
+    --shadow-glow: 0 0 20px hsl(173 58% 39% / 0.15);
+    --shadow-card: 0 4px 24px hsl(222 47% 4% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50;
+    box-shadow: var(--shadow-card);
+  }
+
+  .glow-border {
+    @apply border border-primary/30;
+    box-shadow: var(--shadow-glow);
+  }
+
+  .status-new { @apply bg-info/20 text-info; }
+  .status-pending { @apply bg-warning/20 text-warning; }
+  .status-approved { @apply bg-success/20 text-success; }
+  .status-rejected { @apply bg-destructive/20 text-destructive; }
+}
