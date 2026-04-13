@@ -52,7 +52,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Stats */}
+      {/* Stats
       <section className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <StatCard title="Capital Deployed" value="$1.1M" subtitle="Across 5 companies" icon={DollarSign} />
@@ -60,7 +60,7 @@ export default function LandingPage() {
           <StatCard title="Active Companies" value="5" subtitle="3 sectors" icon={Users} />
           <StatCard title="Avg Risk Score" value="64%" subtitle="Portfolio average" icon={Shield} />
         </div>
-      </section>
+      </section> */}
 
       {/* Sectors */}
       <section className="container mx-auto px-4 py-16">
